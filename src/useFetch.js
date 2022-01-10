@@ -9,7 +9,7 @@ const useFetch = (url) => { // fetching data from data/db.json - a fake rest api
     useEffect(() => {
         const abortCont = new AbortController()
 
-        fetch(url, {signal: abortCont.signal,mode:'no-cors'}) 
+        fetch(url, {signal: abortCont.signal}) 
             .then(res => {
                 if(!res.ok){
                     throw Error('could not fetch the data for that resource')
